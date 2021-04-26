@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript Object</title>
+
+        <script>
+            var car = {
+                type:"Volkswagen", 
+                model:"Tiguan", 
+                color:"Grey Silver", 
+                info: function(){
+                    return "Type: " + this.type + 
+                    " - Model: " + this.model + 
+                    " - Color: " + this.color;
+                }
+            };
+            
+            function checkCarType(){
+                document.getElementById("result1").innerHTML = "Car type: " + car.type +"<br>" + "Model: " + car.model + "<br>" + "Color: " + car.color;
+            }
+
+            function getCarInfo(){
+                document.getElementById("result2").innerHTML = car.info;
+            }
+            
+
+        </script>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+
+            <button type="button" onclick="checkCarType();">Check Car type</button>
+            <button type="button" onclick="getCarInfo();">Check Car info</button>
+
+        </div> <!-- end container -->
+
+    </body>
+</html>

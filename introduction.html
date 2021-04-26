@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Introduction to JavaScript</title>
+        
+        <script>
+            function sayHello(){
+                document.getElementById("changeContent").innerHTML = "Welcome to JavaScript";
+            }
+
+            function turnOnLightBulb(){
+                document.getElementById("lightBulb").src = "https://www.w3schools.com/js/pic_bulbon.gif";
+            }
+
+            function turnOffLightBulb(){
+                document.getElementById("lightBulb").src = "https://www.w3schools.com/js/pic_bulboff.gif";
+            }
+
+            function changeFontSize(){
+                document.getElementById("changeStyle").style.fontSize = '30px';
+            }
+
+            function changeTextColor(){
+                document.getElementById("changeStyle").style.color = 'red';
+            }
+
+            function changeTextWeight(){
+                document.getElementById("changeStyle").style.fontWeight = 'bold';
+            }
+
+            function hide(){
+                document.getElementById("hide").style.display = 'none';
+            }
+
+            function show(){
+                document.getElementById("hide").style.display = 'block';
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <span id="changeContent">JavaScript can change content of this line</span>
+            <br>
+            <button type="button" onclick="sayHello();">Say Hello</button>
+            <br>
+            <br>
+
+            <img id="lightBulb" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="light bulb off">
+            <br>
+            <button type="button" onclick="turnOnLightBulb();">ON</button>
+            <button type="button" onclick="turnOffLightBulb();">OFF</button>
+
+            <br>
+            <p id="changeStyle">The font size of this paragraph will be changed to 30px if you click the button below</p>
+            <button type="button" onclick="changeFontSize();">Font-size: 30px</button>
+            <button type="button" onclick="changeTextColor();">Red color text</button>
+            <button type="button" onclick="changeTextWeight();">Bold</button>
+
+            <br>
+            <p id="hide">This line will be hide if you click the button below</p>
+            <button type="button" onclick="hide()">Hide the line above</button>
+            <button type="button" onclick="show()">Show the line</button>
+            
+        </div>
+    </body>
+</html>

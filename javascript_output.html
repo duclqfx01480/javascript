@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript Output</title>
+
+        <style>
+            #output{
+                font-size: 24px;
+                color: green;
+            }
+        </style>
+
+        <script>
+            function outputByInnerHTML(){
+                document.getElementById("output").innerHTML = "Output the content by InnerHTML"
+            }
+
+            function outputByDocumentWrite(){
+                document.write("Output by DocumentWrite")
+            }
+
+            function outputByAlert(){
+                window.alert("Output by Window.Alert");
+            }
+
+            function outputByConsoleLog(){
+                console.log("Output by Console.Log");
+            }
+
+            function printThisPage(){
+                window.print();
+            }
+
+
+
+        </script>
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <p id="output">Output</p>
+            <button type="button" onclick="outputByInnerHTML();">Output by InnerHTML</button>
+            <button type="button" onclick="outputByDocumentWrite();">Output by DocumentWrite</button>
+            <button type="button" onclick="outputByAlert();">Output by Alert</button>
+            <button type="button" onclick="outputByConsoleLog();">Output by Console.Log</button>
+            <button type="button" onclick="printThisPage();">Print this page</button>
+
+        </div> <!-- end container -->
+
+    </body>
+</html>

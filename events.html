@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript Events</title>
+
+        <script>
+            function displayCurrentTime(){
+                alert(Date());
+            }
+
+        </script>
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <p id="result1"></p>
+            <button type="button" onclick="document.getElementById('result1').innerHTML = Date();">Show current time</button>
+            <button type="button" onclick="this.innerHTML = Date()">Show current time</button>
+            <button type="button" onclick="displayCurrentTime();">Alert current time</button>
+            <button type="button" onmouseover="this.style.color='red';" onmouseout="this.style.color='black'">JavaScript Events</button>
+
+        </div> <!-- end container -->
+
+    </body>
+</html>
