@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Arrays</title>
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+            <p id="result6"></p>
+            <p id="result7"></p>
+            <p id="result8"></p>
+            <p id="result9"></p>
+            <p id="result10"></p>
+            <p id="result11"></p>
+            <p id="result12"></p>
+            <p id="result13"></p>
+            <p id="result14"></p>
+            <p id="result15"></p>
+            <p id="result16"></p>
+            <p id="result17"></p>
+            <p id="result18"></p>
+            <p id="result19"></p>
+            <p id="result20"></p>
+
+            <script>
+                var cars1 = ['Volkswagen', 'Audi', 'Mercedes', 'Toyota', 'Honda', 'Lexus'];
+                var cars2 = new Array('Toyota', 'Acura', 'Honda', 'Nissan', 'GM', 'Ford', 'Volkswagen', 'Mercedes', 'Audi');
+                document.getElementById("result1").innerHTML = "cars1: " + cars1;
+                document.getElementById("result2").innerHTML = "cars2: " + cars2;
+
+                document.getElementById("result3").innerHTML = "cars1[0] = " + cars1[0];
+                cars1[1] = 'Opel';
+                document.getElementById("result4").innerHTML = cars1[1];
+                document.getElementById("result5").innerHTML = "typeof(cars1)= " + typeof(cars1);
+
+                document.getElementById("result6").innerHTML = "cars1.length = " + cars1.length;
+
+                document.getElementById("result7").innerHTML = "cars1:<br>First element: " + cars1[0] + "<br>Last element: " + cars1[cars1.length-1];
+
+                var cars = "<ul>";
+                for(var i=0; i<cars2.length; i++){
+                    cars += "<li>" + cars2[i] + "</li>";
+                }
+                cars += "</ul>"
+                document.getElementById("result8").innerHTML = "cars2: <br>" + cars;
+
+                var text = "<ul>";
+                cars1.forEach(getElement);
+                text += "</ul>"
+
+                function getElement(item){
+                    text += "<li>" + item + "</li>";
+                }
+
+                document.getElementById("result9").innerHTML = "cars1: <br>" + text;
+
+                cars1.push("Tesla");
+                document.getElementById("result10").innerHTML = "cars1 after adding new car producer: <br>" + cars1;
+                cars1[cars1.length] = "Chevrolet";
+                document.getElementById("result11").innerHTML = "cars1 after adding new car producer: <br>" + cars1;
+
+                document.getElementById("result12").innerHTML = "Array.isArray(cars1)= " + Array.isArray(cars1);
+                document.getElementById("result13").innerHTML = "Array.isArray(cars2)= " + Array.isArray(cars2);
+                document.getElementById("result14").innerHTML = "Self-defined function isArray(cars1) = " + isArray(cars1);
+                document.getElementById("result15").innerHTML = "Self-defined function isArray(cars2) = " + isArray(cars2);
+                document.getElementById("result16").innerHTML = "cars1 instanceof Array: " + (cars1 instanceof Array);
+                document.getElementById("result17").innerHTML = "cars2 instanceof Array: " + (cars2 instanceof Array);
+
+                function isArray(x){
+                    return x.constructor.toString().indexOf("Array") > -1;
+                }
+
+
+            </script>
+
+        </div> <!-- end container -->
+    </body>
+</html>

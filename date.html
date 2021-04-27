@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Date Object</title>
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+            <p id="result6"></p>
+            <p id="result7"></p>
+            <p id="result8"></p>
+            <p id="result9"></p>
+            <p id="result10"></p>
+            <p id="result11"></p>
+            <p id="result12"></p>
+            <p id="result13"></p>
+            <p id="result14"></p>
+            <p id="result15"></p>
+            <p id="result16"></p>
+            <p id="result17"></p>
+            <p id="result18"></p>
+            <p id="result19"></p>
+            <p id="result20"></p>
+
+            <script>
+                var date1 = new Date();
+                document.getElementById("result1").innerHTML = date1;
+
+                var date2 = new Date(2021, 3, 28, 10, 30, 30, 0);
+                document.getElementById("result2").innerHTML = date2;
+
+                var date3 = new Date("August 20, 2021");
+                document.getElementById("result3").innerHTML = date3;
+
+                document.getElementById("result4").innerHTML = "date3.toUTCString() : " + date3.toUTCString();
+                document.getElementById("result5").innerHTML = "date3.toDateString() : " + date3.toDateString();
+                document.getElementById("result6").innerHTML = "date3.toISOString() : " + date3.toISOString();
+
+            </script>
+        </div><!-- end container-->
+    </body>
+</html>

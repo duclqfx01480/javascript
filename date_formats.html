@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Date Formats</title>
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+            <p id="result6"></p>
+            <p id="result7"></p>
+            <p id="result8"></p>
+            <p id="result9"></p>
+            <p id="result10"></p>
+            <p id="result11"></p>
+            <p id="result12"></p>
+            <p id="result13"></p>
+            <p id="result14"></p>
+            <p id="result15"></p>
+            <p id="result16"></p>
+            <p id="result17"></p>
+            <p id="result18"></p>
+            <p id="result19"></p>
+            <p id="result20"></p>
+
+            <script>
+                // ISO Date
+                var date1 = new Date("2021-08-20");
+                document.getElementById("result1").innerHTML = "Converted from ISO date string: " + date1;
+
+                // ISO Date
+                var date2 = new Date("2021-08");
+                document.getElementById("result2").innerHTML = "Converted from ISO date string: " +  date2;
+
+                // Short date - MM/DD/YYYY
+                var date3 = new Date("08/20/2021");
+                document.getElementById("result3").innerHTML = "Converted from short date string: " + date3;
+
+                // Long date
+                var date4 = new Date("Aug 20 2021");
+                document.getElementById("result4").innerHTML = "Converted from long date string: " + date4;
+
+                var date5 = Date.parse("March 21, 2021");
+                document.getElementById("result5").innerHTML = "Parse from date string " + date5 + " milliseconds";
+
+            </script>
+        </div><!-- end container-->
+    </body>
+</html>

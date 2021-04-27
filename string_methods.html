@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>String Methods</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+            <p id="result6"></p>
+            <p id="result7"></p>
+            <p id="result8"></p>
+            <p id="result9"></p>
+            <p id="result10"></p>
+            <p id="result11"></p>
+
+            <script>
+                var s1 = "JavaScript";
+                document.getElementById("result1").innerHTML = "String: " + s1 + " - Length: " + s1.length;
+
+                var s2 = "Script";
+                document.getElementById("result2").innerHTML = "Position of " + s2 + " in " + s1 + " is " + s1.indexOf(s2);
+
+                var s3 = "JavaScript can run other JavaScript codes";
+                var s4 = "JavaScript";
+                document.getElementById("result3").innerHTML = "Last position of " + "'" + s4 + "'" + " in " + "'"+ s3 + "'" + " is " + s3.lastIndexOf(s4);
+
+                var s5 = "Please locate where 'locate' occurs!";
+                var s6 = "locate";
+                document.getElementById("result4").innerHTML = "Position found " + '"' + s6 + '"' + " in " + '"' + s5 + '"' + " is " + s5.search(s6);
+
+                var s7 = '0123456789';
+                document.getElementById("result5").innerHTML = "String: " + s7 + "<br>Slice(3,9): " + s7.slice(3,9);
+
+                document.getElementById("result6").innerHTML = "String: " + s7 + "<br>Substring(3,9): " + s7.substring(3,9);
+                document.getElementById("result7").innerHTML = "String: " + s7 + "<br>Substr(3,2): " + s7.substr(3,2);
+
+                var s8 = "JavaScript can run other JavaScript codes";
+                var s9 = "Java";
+                document.getElementById("result8").innerHTML = "Original String: " + s8 + "<br>String after replacement: " + s8.replace(/JavaScript/g, s9);
+
+                var s10 = "javascript";
+                document.getElementById("result9").innerHTML = "Original String: " + s10 + "<br>To uppercase: " + s10.toUpperCase() + "<br>To lowercase: " + s10.toLowerCase();
+
+                var s11 = "Java";
+                var s12 = "Script";
+                document.getElementById("result10").innerHTML = "First string: " + s11 + "<br>Second string: " + s12 + "<br>Join (concat) together: " + s11.concat(" ",s12);
+                
+                document.getElementById("result11").innerHTML = "String: " + s4 + "<br>CharAt(4): " + s4.charAt(4) + "<br>charCodeAt(4): " + s4.charCodeAt(4);
+
+
+            </script>
+
+        </div> <!-- end container -->
+
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Comparison</title>
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <input id="number" type="text">
+            <button onclick="checkNumber();">Check number</button>
+            <p id="result1"></p>
+
+            <script>
+                var txt = "";
+
+                function checkNumber(){
+                    var x;
+                    x = Number(document.getElementById("number").value);
+
+                    if(x>0){
+                        txt = x + " is greater than 0";
+                    } else if(x<0){
+                        txt = x + " is less than 0";
+                    }else{
+                        txt = x + " is equal to 0";
+                    }
+                    document.getElementById("result1").innerHTML = txt;
+                }
+                
+
+
+
+
+
+            </script>
+        </div><!-- end container-->
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Array Iteration</title>
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+            <p id="result6"></p>
+            <p id="result7"></p>
+            <p id="result8"></p>
+            <p id="result9"></p>
+            <p id="result10"></p>
+            <p id="result11"></p>
+            <p id="result12"></p>
+            <p id="result13"></p>
+            <p id="result14"></p>
+            <p id="result15"></p>
+            <p id="result16"></p>
+            <p id="result17"></p>
+            <p id="result18"></p>
+            <p id="result19"></p>
+            <p id="result20"></p>
+
+            <script>
+                var txt = "";
+                var numbers = [45, 4, 9, 16, 25];
+                numbers.forEach(processingFunction);
+
+                document.getElementById("result1").innerHTML = txt;
+                document.getElementById("result2").innerHTML = "After doubling value of each element: " + numbers.map(doubleEachElementValue);
+                document.getElementById("result3").innerHTML = "Filtering elements' value > 18: " + numbers.filter(filterOver18);
+                document.getElementById("result4").innerHTML = "Reduce with sum function- Sum value =  " + numbers.reduce(sumFunction);
+                document.getElementById("result5").innerHTML = "Check if every value over 18:  " + numbers.every(checkOver18);
+                document.getElementById("result6").innerHTML = "Check if some value over 18:  " + numbers.some(checkOver18);
+                document.getElementById("result7").innerHTML = "Find first element's value over 18:  " + numbers.find(checkOver18);
+                document.getElementById("result8").innerHTML = "Find Index of first element's value over 18:  " + numbers.findIndex(checkOver18);
+
+                function processingFunction(value, index, array){
+                    txt = txt + value + "<br>";
+                }
+
+                function doubleEachElementValue(value, index, array){
+                    return value * 2;
+                }
+
+                function filterOver18(value, index, array){
+                    return value > 18;
+                }
+
+                function sumFunction(total, value, index, array){
+                    return total + value;
+                }
+
+                function checkOver18(value, index, array){
+                    return value > 18;
+                }
+
+
+            </script>
+        </div> <!-- end container -->
+
+    </body>
+</html>

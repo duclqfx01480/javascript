@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Array Methods</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+            <p id="result6"></p>
+            <p id="result7"></p>
+            <p id="result8"></p>
+            <p id="result9"></p>
+            <p id="result10"></p>
+            <p id="result11"></p>
+            <p id="result12"></p>
+            <p id="result13"></p>
+            <p id="result14"></p>
+            <p id="result15"></p>
+            <p id="result16"></p>
+            <p id="result17"></p>
+            <p id="result18"></p>
+            <p id="result19"></p>
+            <p id="result20"></p>
+            
+            <script>
+                cars1 = ['BMW', 'Mercedes', 'Audi', 'Volkswagen','Lexus', 'Honda', 'Toyota', 'Acura', 'Infinity', 'Nissan'];
+                document.getElementById("result1").innerHTML = "cars1: <br>" + cars1.toString();
+                document.getElementById("result2").innerHTML = "cars1[join with *]: <br>" + cars1.join(" * ");
+
+                cars1.pop();
+                document.getElementById("result3").innerHTML = "cars1 [after pop]: <br>" + cars1.toString();
+
+                cars1.push('Tesla');
+                document.getElementById("result4").innerHTML = "cars1 [after push('Tesla')]: <br>" + cars1.toString();
+
+                cars1.shift();
+                document.getElementById("result5").innerHTML = "cars1 [after shift]: <br>" + cars1.toString();
+
+                document.getElementById("result6").innerHTML = "New array length after unshift('Ford'): " + cars1.unshift("Ford");
+                document.getElementById("result7").innerHTML = "cars1 [after unshift('Ford')]: <br>" + cars1.toString();
+
+                delete cars1[1];
+                document.getElementById("result8").innerHTML = "cars1 [after delete cars1[1]]: <br>" + cars1.toString();
+
+                cars1.splice(1,1);
+                document.getElementById("result9").innerHTML = "cars1 [after splice(1,1)]: <br>" + cars1.toString();
+
+                var cars2 = ['Honda', 'Toyota'];
+                var cars3 = ['Lexus', 'Infinity'];
+                var cars = cars2.concat(cars3);
+                document.getElementById("result10").innerHTML = "cars2: " + cars2 + "<br>cars3: " + cars3 + "<br>Concate: " + cars;
+
+
+            </script>
+
+        </div> <!-- end container -->
+
+    </body>
+</html>

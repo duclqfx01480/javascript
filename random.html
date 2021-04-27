@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Random</title>
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+            <p id="result6"></p>
+            <p id="result7"></p>
+            <p id="result8"></p>
+            <p id="result9"></p>
+            <p id="result10"></p>
+            <p id="result11"></p>
+            <p id="result12"></p>
+            <p id="result13"></p>
+            <p id="result14"></p>
+            <p id="result15"></p>
+            <p id="result16"></p>
+            <p id="result17"></p>
+            <p id="result18"></p>
+            <p id="result19"></p>
+            <p id="result20"></p>
+
+            <script>
+                document.getElementById("result1").innerHTML = "Math.random(): " + Math.random();
+                document.getElementById("result2").innerHTML = "Random Integer [0-9]: " + Math.floor(Math.random()*10);
+                document.getElementById("result3").innerHTML = "Random Integer [0-99]: " + Math.floor(Math.random()*100);
+                document.getElementById("result4").innerHTML = "Random Integer [1-10]: " + (Math.floor(Math.random()*10)+1);
+                document.getElementById("result5").innerHTML = "Random Integer [1-100]: " + (Math.floor(Math.random()*100)+1);
+
+                document.getElementById("result6").innerHTML = "Random Integer [10-20]: " + getRandomNumber(10,20);
+                
+                function getRandomNumber(min, max){
+                    return Math.floor(Math.random() * (max+1-min)) + min;
+                }
+                
+
+
+
+
+            </script>
+        </div><!-- end container-->
+    </body>
+</html>

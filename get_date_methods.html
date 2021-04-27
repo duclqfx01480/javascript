@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Get Date Methods</title>
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+            <p id="result6"></p>
+            <p id="result7"></p>
+            <p id="result8"></p>
+            <p id="result9"></p>
+            <p id="result10"></p>
+            <p id="result11"></p>
+            <p id="result12"></p>
+            <p id="result13"></p>
+            <p id="result14"></p>
+            <p id="result15"></p>
+            <p id="result16"></p>
+            <p id="result17"></p>
+            <p id="result18"></p>
+            <p id="result19"></p>
+            <p id="result20"></p>
+
+            <script>
+                var date1 = new Date();
+                document.getElementById("result1").innerHTML = "Current date and time: " + date1;
+
+                document.getElementById("result2").innerHTML = "getTime: " + date1.getTime() + " milliseconds";
+                document.getElementById("result3").innerHTML = "getFullYear(): " + date1.getFullYear();
+                document.getElementById("result4").innerHTML = "getMonth(): " + date1.getMonth();
+                document.getElementById("result5").innerHTML = "getDate(): " + date1.getDate();
+                document.getElementById("result6").innerHTML = "getHours(): " + date1.getHours();
+                document.getElementById("result7").innerHTML = "getMinutes(): " + date1.getMinutes();
+
+                var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                document.getElementById("result8").innerHTML = "getDay(): " + days[date1.getDay()];
+
+
+            </script>
+        </div><!-- end container-->
+    </body>
+</html>

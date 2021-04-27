@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Strings</title>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+            <p id="result6"></p>
+            <p id="result7"></p>
+
+            <script>
+                var myName = "John";
+                document.getElementById("result1").innerHTML = myName;
+
+                var carName1 = "Volkswagen Tiguan";
+                var carName2 = "Audi R8";
+                document.getElementById("result2").innerHTML = carName1 + " & " + carName2;
+
+                var ans1 = "It's alright";
+                var ans2 = "He is called 'Johnny'";
+                var ans3 = 'He is called "Johnny"';
+                document.getElementById("result3").innerHTML = ans1 + "<br>" + ans2 + "<br>" + ans3;
+
+                var txt = "This is the text";
+                document.getElementById("result4").innerHTML = txt + " - Length: " + txt.length;
+
+                var viking = "Using Escape character: We are the so-called \"Viking\" from the north.";
+                document.getElementById("result5").innerHTML = viking;
+
+                var x = "John";
+                var y = new String("John");
+                document.getElementById("result6").innerHTML = "First String: " + x +" - Type: " + typeof(x) + "<br>Second String: " + y + " - Type: " + typeof(y) + "<br>Value equal: " + (x==y) + "<br>Type and value equal: " + (x===y);
+
+                var x = new String("John");
+                var y = new String("John");
+                document.getElementById("result7").innerHTML = "First String: " + x +" - Type: " + typeof(x) + "<br>Second String: " + y + " - Type: " + typeof(y) + "<br>Value equal: " + (x==y) + "<br>Type and value equal: " + (x===y);
+
+
+            </script>
+
+        </div> <!-- end container -->
+
+    </body>
+</html>

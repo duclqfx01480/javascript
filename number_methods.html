@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Number Methods</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+            <p id="result6"></p>
+            <p id="result7"></p>
+            <p id="result8"></p>
+            <p id="result9"></p>
+            <p id="result10"></p>
+            <p id="result11"></p>
+            <p id="result12"></p>
+            <p id="result13"></p>
+            <p id="result14"></p>
+            <p id="result15"></p>
+            <p id="result16"></p>
+            <p id="result17"></p>
+            <p id="result18"></p>
+            <p id="result19"></p>
+            <p id="result20"></p>
+            <p id="result21"></p>
+            <p id="result22"></p>
+            <p id="result23"></p>
+            <p id="result24"></p>
+            <p id="result25"></p>
+
+            <script>
+                var x = 123;
+                document.getElementById("result1").innerText = "x = " + x + " - ToString: " + x.toString();
+
+                var y = 9.656;
+                document.getElementById("result2").innerHTML = "y = " + y + "<br>toFixed(0): " + y.toFixed(0) + "<br>toFixed(2): " + y.toFixed(2) + "<br>toFixed(4): " + y.toFixed(4);
+
+                document.getElementById("result3").innerHTML = "Number(true)= " + Number(true) + "<br>Number('10')= " + Number('10') + "<br>Number('  10.33  ')= " + Number('  10.33  ') + "<br>Number('John')= " + Number('John');
+                document.getElementById("result4").innerHTML = "parseInt('10')= " + parseInt('10');
+                document.getElementById("result5").innerHTML = "parseFloat('10.33')= " + parseFloat('10.33');
+                document.getElementById("result6").innerHTML = "Number.MIN_VALUE = " + Number.MIN_VALUE + "<br>Number.MAX_VALUE = " + Number.MAX_VALUE;
+                document.getElementById("result7").innerHTML = "Number.POSITIVE_INFINITY = " + Number.POSITIVE_INFINITY + "<br>Number.NEGATIVE_INFINITY = " + Number.NEGATIVE_INFINITY;
+
+            </script>
+        </div> <!-- end container -->
+    </body>
+</html>

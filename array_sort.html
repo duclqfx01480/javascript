@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Array Sort</title>
+    </head>
+    <body>
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+            <p id="result6"></p>
+            <p id="result7"></p>
+            <p id="result8"></p>
+            <p id="result9"></p>
+            <p id="result10"></p>
+            <p id="result11"></p>
+            <p id="result12"></p>
+            <p id="result13"></p>
+            <p id="result14"></p>
+            <p id="result15"></p>
+            <p id="result16"></p>
+            <p id="result17"></p>
+            <p id="result18"></p>
+            <p id="result19"></p>
+            <p id="result20"></p>
+
+            <script>
+                var cars1 = ['Honda', 'Toyota', 'Nissan', 'Lexus', 'Acura', 'Infinity', 'Volswagen', 'Mercedes', 'Opel', 'Saab', 'Audi'];
+                document.getElementById("result1").innerHTML = "cars1: " + cars1;
+
+                cars1.sort();
+                document.getElementById("result2").innerHTML = "cars1 [after sorting alphabetical]:<br>" + cars1;
+
+                cars1.reverse();
+                document.getElementById("result3").innerHTML = "cars1 [after sorting alphabetical]:<br>" + cars1;
+
+                var numbers = [1,5,1,9, 12,56, 72, 99, 1, 3, 2, 9, 8, 3];
+                document.getElementById("result4").innerHTML = "numbers <br>" + numbers;
+                numbers.sort(function(a,b) {return a-b});
+                document.getElementById("result5").innerHTML = "numbers [after sorting asc]:<br>" + numbers;
+                numbers.sort(function(a,b){return b-a});
+                document.getElementById("result6").innerHTML = "numbers [after sorting desc]:<br>" + numbers;
+
+                function findArrayMax(arr){
+                    return Math.max.apply(null, arr);
+                }
+
+                function findArrayMin(arr){
+                    return Math.min.apply(null, arr);
+                }
+
+                var max = findArrayMax(numbers);
+                document.getElementById("result7").innerHTML = "Max in numbers array: " + max;
+
+                var min = findArrayMin(numbers);
+                document.getElementById("result8").innerHTML = "Max in numbers array: " + min;
+
+            </script>
+
+        </div> <!-- end container -->
+    </body>
+</html>

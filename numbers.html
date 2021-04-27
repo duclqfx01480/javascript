@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Numbers</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+            <p id="result6"></p>
+            <p id="result7"></p>
+            <p id="result8"></p>
+            <p id="result9"></p>
+            <p id="result10"></p>
+            <p id="result11"></p>
+            <p id="result12"></p>
+            <p id="result13"></p>
+            <p id="result14"></p>
+            <p id="result15"></p>
+            <p id="result16"></p>
+            <p id="result17"></p>
+            <p id="result18"></p>
+            <p id="result19"></p>
+            <p id="result20"></p>
+
+            <script>
+                var x = 3.14;
+                var y = 9;
+                var z = 123e5;
+                var m = 123e-5;
+                document.getElementById("result1").innerHTML = "x = " + x + "<br>y = " + y + "<br>z = " + z + "<br>m = " + m;
+
+                var a = 10;
+                var b = 20;
+                var c = a + b;
+                document.getElementById("result2").innerHTML = "a = " + a + "<br>b = " + b + "<br>a + b = " + c;
+
+                var a = "10";
+                var b = "20";
+                var c = a + b;
+                document.getElementById("result3").innerHTML = "a = " + "'" + a + "'" + "<br>b = " + "'" + b + "'" + "<br>a + b = " + "'" + c + "'";
+
+                var a = 10;
+                var b = "20";
+                var c = a + b;
+                document.getElementById("result4").innerHTML = "a = " + a + "<br>b = " + "'" + b + "'" + "<br>a + b = " + "'" + c + "'";
+
+                var a = "100";
+                var b = "20";
+                var c = a / b;
+                document.getElementById("result5").innerHTML = "a = " + "'" + a + "'" + "<br>b = " + "'" + b + "'" + "<br>a / b = " + c;
+
+                var a = "50";
+                var b = "2";
+                var c = a * b;
+                document.getElementById("result6").innerHTML = "a = " + "'" + a + "'" + "<br>b = " + "'" + b + "'" + "<br>a * b = " + c;
+
+                var a = "100";
+                var b = "10";
+                var c = a - b;
+                document.getElementById("result7").innerHTML = "a = " + "'" + a + "'" + "<br>b = " + "'" + b + "'" + "<br>a - b = " + c;
+
+                var a = "50";
+                var b = "30";
+                var c = a + b;
+                document.getElementById("result8").innerHTML = "a = " + "'" + a + "'" + "<br>b = " + "'" + b + "'" + "<br>(This is will not work)<br>a + b = " + c;
+
+                var a = "50";
+                var b = "apple";
+                var c = a / b;
+                document.getElementById("result9").innerHTML = "(Not-a-number)<br>a = " + "'" + a + "'" + "<br>b = " + "'" + b + "'" + "<br>a / b = " + c;
+
+                document.getElementById("result10").innerHTML = "100/\"apple\" is NaN: " + isNaN(100/"apple");
+
+                var a = NaN;
+                var b = 20;
+                var c = a + b;
+                document.getElementById("result11").innerHTML = "(NaN + number)<br>a = " + a + "<br>b = " + b + "<br>a + b = " + c;
+
+                var a = NaN;
+                var b = "20";
+                var c = a + b;
+                document.getElementById("result12").innerHTML = "(Not-a-number + String)<br>a = " + a + "<br>b = " + "'" + b + "'" + "<br>a + b = " + c;
+
+                var myNumber = 2;
+                var txt = "";
+                while(myNumber != Infinity){
+                    myNumber = myNumber * myNumber;
+                    txt = txt + myNumber + "<br>";
+                }
+                document.getElementById("result13").innerHTML = txt;
+
+                document.getElementById("result14").innerHTML = "2/0 = " + (2/0);
+                document.getElementById("result15").innerHTML = "-2/0 = " + (-2/0);
+                document.getElementById("result16").innerHTML = "typeof(Infinity) = " + typeof(Infinity);
+                document.getElementById("result17").innerHTML = "typeof(NaN) = " + typeof(NaN);
+
+                var hex = 0xFF;
+                document.getElementById("result18").innerHTML = "(hex number) 0xFF = " + hex;
+
+                var myNumber = 32;
+                document.getElementById("result19").innerHTML = myNumber + "(10) = " + myNumber.toString(2) + "(2) = " + myNumber.toString(8) + "(8) = " + myNumber.toString(16) + "(16)";
+
+
+
+            </script>
+        </div> <!-- end container -->
+
+    </body>
+</html>
