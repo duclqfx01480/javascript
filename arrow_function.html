@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Arrow Function</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+            <p id="result6"></p>
+            <p id="result7"></p>
+            <p id="result8"></p>
+            <p id="result9"></p>
+            <p id="result10"></p>
+            <p id="result11"></p>
+            <p id="result12"></p>
+            <p id="result13"></p>
+            <p id="result14"></p>
+            <p id="result15"></p>
+            <p id="result16"></p>
+            <p id="result17"></p>
+            <p id="result18"></p>
+            <p id="result19"></p>
+            <p id="result20"></p>
+            
+            <script>
+                // without arrow function
+                var message1;
+                message1 = function(){
+                    return "This is the first message";
+                }
+
+                document.getElementById("result1").innerHTML = "Get message WITHOUT arrow function: <br>" + message1();
+
+                // with arrow function
+                var message2;
+                message2 = () => {
+                    return "This is the second message";
+                }
+                document.getElementById("result2").innerHTML = "Get message WITH arrow function: <br>" + message2();
+
+                // short form of arrow function
+                var message3;
+                message3 = () => "This is the third message";
+                document.getElementById("result3").innerHTML = "Get message WITH arrow function [SHORT FORM]: <br>" + message3();
+
+                // short form and parameter
+                var message4;
+                message4 = (name) => "Hello " + name;
+                document.getElementById("result4").innerHTML = "Get message WITH arrow function [SHORT FORM + parameter]:<br>" + message4("Jane");
+
+                var message5;
+                message5 = name => "Hello " + name;
+                document.getElementById("result5").innerHTML = "Get message WITH arrow function [SHORT FORM + parameter]:<br>" + message5("Alex");
+
+            </script>
+
+        </div> <!-- end container -->
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>For loop</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+            <p id="result6"></p>
+            <p id="result7"></p>
+            <p id="result8"></p>
+            <p id="result9"></p>
+            <p id="result10"></p>
+            <p id="result11"></p>
+            <p id="result12"></p>
+            <p id="result13"></p>
+            <p id="result14"></p>
+            <p id="result15"></p>
+            <p id="result16"></p>
+            <p id="result17"></p>
+            <p id="result18"></p>
+            <p id="result19"></p>
+            <p id="result20"></p>
+
+            <script>
+                var cars = ["Volkswagen", "BMW", "Audi", "Honda", "Lexus", "Toyota"];
+                var text = "";
+
+                for(i=0; i<cars.length; i++){
+                    text += cars[i] + "<br>";
+                }
+
+                document.getElementById("result1").innerHTML = "Result of FOR loop: <br>" + text;
+            </script>
+
+        </div> <!-- end container -->
+    </body>
+</html>

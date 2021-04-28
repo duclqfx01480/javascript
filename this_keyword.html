@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>This Keyword</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+
+
+            <button type="button" onclick="checkThisValue()">'this' is called inside the function. Check value of this</button>
+            <br><br>
+            <button type="button" onclick="this.style.display='none'">Click to remove this button</button>
+            
+            <script>
+                var person = {
+                    firstname: "John",
+                    lastname: "Doe",
+                    id: 5566,
+                    fullname: function(){
+                        return this.firstname + " " + this.lastname;
+                    }
+                }
+
+                // display data from the object
+                document.getElementById("result1").innerHTML = person.fullname();
+
+                function checkThisValue(){
+                    var x = this;
+                    alert(x);
+                }
+
+            </script>
+
+        </div> <!-- end container -->
+    </body>
+</html>

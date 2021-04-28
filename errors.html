@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Errors - Try Catch Throw Finally</title>
+    </head>
+
+    <body>
+        <div class="container">
+
+            <p>Please input the number between 5 and 10:</p>
+            <input type="text" id="inputNumber">
+            <button type="button" onclick="validateInputNumber()">Validate Number</button>
+
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+            <p id="result6"></p>
+            <p id="result7"></p>
+            <p id="result8"></p>
+            <p id="result9"></p>
+            <p id="result10"></p>
+            <p id="result11"></p>
+            <p id="result12"></p>
+            <p id="result13"></p>
+            <p id="result14"></p>
+            <p id="result15"></p>
+            <p id="result16"></p>
+            <p id="result17"></p>
+            <p id="result18"></p>
+            <p id="result19"></p>
+            <p id="result20"></p>
+            
+            <script>
+
+                function validateInputNumber(){
+                    var message, x;
+                    message = document.getElementById("result2");
+                    message.innerHTML = "";
+                    x = document.getElementById("inputNumber").value;
+
+                    try{
+                        if(x=="") throw "empty";
+                        if(isNaN(x)) throw "not a number";
+                        x = Number(x);
+                        if(x < 5) throw "lower than 5";
+                        if(x>=5 && x<=10) throw "between 5 and 10";
+                        if(x > 10) throw "higher than 5";
+                    }
+                    catch(err){
+                        message.innerHTML = "Input is " + err;
+                    }
+                    finally{
+                        document.getElementById("inputNumber").value = "";
+                    }
+                }
+
+
+            </script>
+
+        </div> <!-- end container -->
+    </body>
+</html>

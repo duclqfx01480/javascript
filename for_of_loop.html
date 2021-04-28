@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>For Of Loop</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+            <p id="result6"></p>
+            <p id="result7"></p>
+            <p id="result8"></p>
+            <p id="result9"></p>
+            <p id="result10"></p>
+            <p id="result11"></p>
+            <p id="result12"></p>
+            <p id="result13"></p>
+            <p id="result14"></p>
+            <p id="result15"></p>
+            <p id="result16"></p>
+            <p id="result17"></p>
+            <p id="result18"></p>
+            <p id="result19"></p>
+            <p id="result20"></p>
+
+            <script>
+                // Loop over array
+                let cars = ["Volkswagen", "BMW", "Audi", "Honda", "Toyota", "Lexus", "Acura"];
+                let txt = "";
+
+                for(let x of cars){
+                    txt += x + "<br>";
+                }
+
+                document.getElementById("result1").innerHTML = "Value in cars array [using FOR OF loop]:<br>" + txt;
+
+                // Loop over string
+                let str = "JavaScript";
+                let text = "";
+                for (let c of str){
+                    text += c + "<br>";
+                }
+                document.getElementById("result2").innerHTML = "Character in " + str + " string:<br>" + text;
+
+
+            </script>
+
+        </div> <!-- end container -->
+    </body>
+</html>

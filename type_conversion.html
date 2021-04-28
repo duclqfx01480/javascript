@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Type Conversion</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+            <p id="result6"></p>
+            <p id="result7"></p>
+            <p id="result8"></p>
+            <p id="result9"></p>
+            <p id="result10"></p>
+            <p id="result11"></p>
+            <p id="result12"></p>
+            <p id="result13"></p>
+            <p id="result14"></p>
+            <p id="result15"></p>
+            <p id="result16"></p>
+            <p id="result17"></p>
+            <p id="result18"></p>
+            <p id="result19"></p>
+            <p id="result20"></p>
+            
+            <script>
+                var x = 123;
+                // convert number to string
+                document.getElementById("result1").innerHTML = "Convert number to string:<br>x = " + x + " - String(x) = " + String(x);
+                document.getElementById("result2").innerHTML = "x = " + x + " - x.toString() = " + x.toString();
+            
+                // convert boolean to string
+                document.getElementById("result3").innerHTML = "Convert boolean to string<br>String(false) = " + String(false) + "<br>String(true) = " + String(true);
+                document.getElementById("result4").innerHTML = "Convert boolean to string<br>false.toString() = " + false.toString() + "<br>true.toString() = " + true.toString();
+                
+                // convert date to string
+                document.getElementById("result5").innerHTML = "Convert date to string:<br>String(Date()) = " + String(Date()) + "<br>Date().toString() = " + Date().toString();
+
+                // convert string to number
+                document.getElementById("result6").innerHTML = "Convert string to number:<br>Number('3.14') = " + Number('3.14') + "<br>Number('') = " + Number('');
+
+                
+
+
+
+            </script>
+
+        </div> <!-- end container -->
+    </body>
+</html>
