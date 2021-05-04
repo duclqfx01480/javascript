@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Classes</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h2>JavaScript Class Method</h2>
+            <p id="result"></p>
+
+            <script>
+                class Car{
+                    constructor(name, year){
+                        this.name = name;
+                        this.year = year;
+                    }
+
+                    age(){
+                        let date = new Date();
+                        return date.getFullYear() - this.year;
+                    }
+                }
+
+                let tiguan = new Car("Tiguan", 2019);
+                document.getElementById("result").innerHTML = "My car is " + tiguan.age() + " years old";
+            </script>
+
+
+        </div> <!-- end container -->
+    </body>
+</html>
