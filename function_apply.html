@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Function Apply</title>
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+            
+            <script>
+                var personInfo1 = {
+                    fullName: function(){
+                        return this.firstName + " " + this.lastName;
+                    }
+                }
+
+                var person1 = {
+                    firstName:"John",
+                    lastName:"Doe"
+                }
+
+                var personInfo2 = {
+                    fullName: function(city, country){
+                        return this.firstName + " " + this.lastName + ", " + city + ", " + country;
+                    }
+                }
+
+                var person2 = {
+                    firstName:"Mary", 
+                    lastName:"Jones"
+                }
+
+                document.getElementById("result1").innerHTML = personInfo1.fullName.apply(person1);
+                document.getElementById("result2").innerHTML = personInfo2.fullName.apply(person2, ["Stuttgart", "Germany"]);
+
+                document.getElementById("result3").innerHTML = "Math.max.apply(null, [1,2,3]) = " + Math.max.apply(null, [1,2,3]);
+
+            </script>
+        </div> <!-- end container -->
+    </body>
+</html>

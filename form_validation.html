@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Form Validation</title>
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <input id="input1" type="number" min="100" max="300" required>
+            <button onclick="validateNumber1()">OK</button>
+            <p id="result1"></p>
+
+            <br>
+
+            <p>The input below does not accept value less than 1 or more than 100</p>
+            <input id="input2" type="number" min="1" max="100">
+            <button onclick="validateNumber2()">OK</button>
+            <p id="result2"></p>
+
+            <script>
+                function validateNumber1(){
+                    var obj = document.getElementById("input1");
+                    if(!obj.checkValidity()){
+                        document.getElementById("result1").innerHTML = obj.validationMessage;
+                    } else{
+                        document.getElementById("result1").innerHTML = "Input OK";
+                    }
+                }
+
+                function validateNumber2(){
+                    var txt = "";
+                    if(document.getElementById("input2").validity.rangeOverflow){
+                        txt = "Value is too large";
+                    } else if(document.getElementById("input2").validity.rangeUnderflow){
+                        txt = "Value is too small";
+                    }
+                    document.getElementById("result2").innerHTML = txt;
+                }
+            </script>
+        </div> <!-- end container -->
+    </body>
+</html>

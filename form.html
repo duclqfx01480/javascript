@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Form Validation</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h2>Form validation</h2>
+            <form action="" name="myForm" onsubmit="return validateForm()" method="POST">
+                <label for="fname">First name</label>
+                <input type="text" id="fname" name="fname">
+                <label for="lname">Last name</label>
+                <input type="text" id="lname" name="lname">
+                <input type="submit" value="Submit">
+            </form>
+
+            <h2>Another form - automatically validated</h2>
+            <form action="/action_page.php" method="POST">
+                <input type="text" name="fname" required>
+                <input type="number" min="1" max="10">
+                <input type="submit" value="Submit">
+            </form>
+
+            <p>Please input a number between 1 and 10</p>
+            <input id="numb">
+            <button type="button" onclick="validateNumber()">Submit</button>
+
+            <p id="result"></p>
+
+            <script>
+
+                function validateForm(){
+                    var x = document.forms["myForm"]["fname"].value;
+                    if(x==""){
+                        alert("First name must be filled out");
+                        return false;
+                    }else{
+                        alert("Form has been submitted");
+                    }
+                }
+
+                function validateNumber(){
+                    var x, text;
+                    x = document.getElementById("numb").value;
+
+                    if(isNaN(x) || x < 1 || x > 10){
+                        text = "Input not valid";
+                    }else{
+                        text = "Input OK";
+                    }
+
+                    document.getElementById("result").innerHTML = text;
+                }
+            </script>
+        </div> <!-- end container -->
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Async - Promise</title>
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+
+            <script>
+
+                // Waiting for a Timeout
+                let myPromise1 = new Promise(function(myResolve, myReject){
+                    setTimeout(function(){ myResolve("Hello World"); }, 3000);
+                });
+
+                myPromise1.then(function(value){
+                    document.getElementById("result1").innerHTML = value;
+                });
+
+                // Waiting for a File
+                function showMessage(message){
+                    document.getElementById("result2").innerHTML = message;
+                }
+                
+                let myPromise2 = new Promise(function(myResolve, myReject){
+                    let req = new XMLHttpRequest();
+                    req.open('GET', 'https://www.w3schools.com/js/mycar.html');
+
+                    req.onload = function() {
+                        if (req.status == 200) {
+                            myResolve(req.response);
+                        } else{
+                            myReject("File not found");
+                        }
+                    };
+
+                    req.send();
+                });
+
+                myPromise2.then(
+                    function(value) {showMessage(value); },
+                    function(error) {showMessage(error); }
+                )
+       
+
+            </script>
+
+        </div> <!-- end container -->
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Function Invocation</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+
+            <script>
+                var obj = {
+                    firstName: "John", 
+                    lastName: "Doe",
+                    fullName: function() {
+                        return this.firstName + " " + this.lastName;
+                    }
+                }
+
+                document.getElementById("result1").innerHTML = obj.fullName();
+
+
+                function Person(arg1, arg2){
+                    this.firstName = arg1;
+                    this.lastName = arg2;
+                }
+
+                var x = new Person("John", "Doe");
+                document.getElementById("result2").innerHTML = x.firstName;
+            </script>
+        </div><!-- end container -->
+    </body>
+</html>

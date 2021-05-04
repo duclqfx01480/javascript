@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Function Call</title>
+    </head>
+
+    <body>
+        <div class="container">
+
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+
+            <script>
+
+                var personInfo1 = {
+                    fullName: function(){
+                        return this.firstName + " " + this.lastName;
+                    }
+                }
+
+                var person1 = {
+                    firstName:"John",
+                    lastName:"Doe"
+                }
+
+                var person2 = {
+                    firstName:"Mary",
+                    lastName:"Jones"
+                }
+
+                var personInfo2 = {
+                    fullName:function(city, country){
+                        return this.firstName + " " + this.lastName + ", " + city + ", " + country;
+                    }
+                }
+
+                var person3 = {
+                    firstName:"Volkswagen",
+                    lastName:"Tiguan"
+                }
+
+                document.getElementById("result1").innerHTML = personInfo1.fullName.call(person1);
+                document.getElementById("result2").innerHTML = personInfo1.fullName.call(person2);
+                document.getElementById("result3").innerHTML = personInfo2.fullName.call(person3, "Stuttgart", "Germany");
+
+            </script>
+
+        </div> <!-- end container -->
+    </body>
+</html>

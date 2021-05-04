@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Classes Inheritance</title>
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+
+            <script>
+                class Car {
+                    constructor(brand){
+                        this.brand = brand;
+                    }
+                    carInfo() {
+                        return "Brand: " + this.brand;
+                    }
+
+                    get carBrand(){
+                        return this.brand;
+                    }
+
+                    set carBrand(brand){
+                        this.brand = brand;
+                    }
+                }
+
+                class SportCar extends Car {
+                    constructor(brand, model){
+                        super(brand);
+                        this.model = model;
+                    }
+                    showInfo(){
+                        return this.carInfo() + " - Model: " + this.model;
+                    }
+
+                    get carModel(){
+                        return this.model;
+                    }
+
+                    set carModel(model){
+                        this.model = model;
+                    }
+                }
+
+                var ford = new Car("Ford");
+                document.getElementById("result1").innerHTML = ford.carInfo();
+                document.getElementById("result2").innerHTML = ford.carBrand;
+
+                var acuraNSX = new SportCar("Acura", "NSX");
+                document.getElementById("result4").innerHTML = acuraNSX.showInfo();
+                document.getElementById("result5").innerHTML = acuraNSX.carModel;
+
+            </script>
+        </div>  <!-- end container -->
+    </body>
+</html>

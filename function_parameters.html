@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Function Parameters</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+
+            <script>
+
+                var x = findMax(1, 123, 500, 115, 44, 88);
+                document.getElementById("result1").innerHTML = "Max = " + x;
+
+                var s = sumAll(1, 123, 500, 115, 44, 88);
+                document.getElementById("result2").innerHTML = "Sum = " + s;
+
+
+                function findMax(){
+                    var i;
+                    var max = -Infinity;
+                    for(i=0; i < arguments.length; i++){
+                        if (arguments[i] > max){
+                            max = arguments[i];
+                        }
+                    }
+                    return max;
+                }
+
+                function sumAll(){
+                    var i;
+                    var sum = 0;
+                    for(i=0; i < arguments.length; i++){
+                        sum += arguments[i];
+                    }
+                    return sum;
+                }
+
+            </script>
+
+        </div> <!-- end container -->
+    </body>
+</html>

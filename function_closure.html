@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Function Closure</title>
+    </head>
+
+    <body>
+        <div class="container">
+
+            <p id="result1"></p>
+            <p id="result2">0</p>
+            <p id="result3">0</p>
+            <p id="result4"></p>
+            <p id="result5"></p>
+
+            <button type="button" onclick="count2()">Count</button>
+            <button type="button" onclick="count3()">Count</button>
+
+            <script>
+                document.getElementById("result1").innerHTML = add1();
+
+                function add1(){
+                    var counter = 0;
+                    function plus(){return counter++;}
+                    plus();
+                    return counter;
+                }
+
+                var add2 = (function(){
+                    var counter = 0;
+                    return function(){counter +=1; return counter;}
+                })();
+
+                function count2(){
+                    document.getElementById("result2").innerHTML = add2();
+                }
+
+                var add3 = (function(){
+                    var counter = 0;
+                    return function(){counter +=1; return counter;}
+                })();
+
+                function count3(){
+                    document.getElementById("result3").innerHTML = add3();
+                }
+
+                
+
+            </script>
+        </div> <!-- end container -->
+    </body>
+</html>
